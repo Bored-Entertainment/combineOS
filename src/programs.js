@@ -1304,6 +1304,21 @@ add_icon_not_via_filesystem({
     open: function() { systemExecuteFile("/games/dosbox"); },
 });
 add_icon_not_via_filesystem({
+    title: "DeSmuME",
+    iconID: "desmume",
+    open: function() {
+        Task(make_iframe_window({
+            src: "/programs/desmume/",
+            icons: iconsAtTwoSizes("desmume"),
+            title: "DeSmuME",
+            outerWidth: 835,
+            outerHeight: 500,
+            resizable: true,
+        }));
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "Bored in School Right Now",
     iconID: "bored",
     open: function() {
