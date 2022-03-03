@@ -1505,6 +1505,21 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "VisualBoyAdvance",
+    iconID: "vba",
+    open: function() {
+        Task(make_iframe_window({
+            src: "/programs/vba/",
+            icons: iconsAtTwoSizes("vba"),
+            title: "VisualBoyAdvance",
+            outerWidth: 600,
+            outerHeight: 400,
+            resizable: true,
+        }));
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "2048",
     iconID: "2048",
     open: function() {
