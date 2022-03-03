@@ -1475,6 +1475,21 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Atari Gameroom",
+    iconID: "atari-gameroom",
+    open: function() {
+        Task(make_iframe_window({
+            src: "/programs/atari-gameroom/",
+            icons: iconsAtTwoSizes("atari-gameroom"),
+            title: "Atari Gameroom",
+            outerWidth: 835,
+            outerHeight: 500,
+            resizable: true,
+        }));
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "2048",
     iconID: "2048",
     open: function() {
