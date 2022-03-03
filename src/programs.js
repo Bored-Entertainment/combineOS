@@ -249,7 +249,7 @@ function Flash(file_path) {
 
     var $win = make_iframe_window({
         src: "programs/flash/" + (file_path ? ("?swf=" + file_path) : ""),
-        icons: iconsAtTwoSizes("notepad"),
+        icons: iconsAtTwoSizes("adobe-flash"),
         title: win_title,
         outerWidth: 480,
         outerHeight: 321,
@@ -1484,6 +1484,21 @@ add_icon_not_via_filesystem({
             title: "Atari Gameroom",
             outerWidth: 835,
             outerHeight: 500,
+            resizable: true,
+        }));
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
+    title: "ParaLLEl N64",
+    iconID: "n64",
+    open: function() {
+        Task(make_iframe_window({
+            src: "/programs/parallel-n64/",
+            icons: iconsAtTwoSizes("n64"),
+            title: "ParaLLEl N64",
+            outerWidth: 600,
+            outerHeight: 600,
             resizable: true,
         }));
     },
