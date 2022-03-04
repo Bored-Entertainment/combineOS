@@ -1692,6 +1692,23 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Cut the Rope",
+    iconID: "ctr",
+    open: function() {
+        /*
+        Task(make_iframe_window({
+            src: "/games/html/ctr/",
+            icons: iconsAtTwoSizes("ctr"),
+            title: "Cut the Rope",
+            outerWidth: 960,
+            outerHeight: 550,
+            resizable: true,
+        }));*/
+        window.open("/games/html/ctr/", "_blank");
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
