@@ -1319,6 +1319,21 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "The Mesa Complex",
+    iconID: "mesa",
+    open: function() {
+        Task(make_iframe_window({
+            src: "https://mesacomplex.tk/",
+            icons: iconsAtTwoSizes("mesa"),
+            title: "The Mesa Complex",
+            outerWidth: 835,
+            outerHeight: 500,
+            resizable: true,
+        }));
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "OS.js",
     iconID: "os-js",
     open: function() {
