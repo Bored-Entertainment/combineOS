@@ -1677,6 +1677,21 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Candybox 2",
+    iconID: "candybox2",
+    open: function() {
+        Task(make_iframe_window({
+            src: "/games/html/candybox2/",
+            icons: iconsAtTwoSizes("candybox2"),
+            title: "Candybox 2",
+            outerWidth: 835,
+            outerHeight: 500,
+            resizable: true,
+        }));
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
