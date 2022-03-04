@@ -45,12 +45,26 @@
         <div class="taskbar-divider"></div>
         <div class="tray inset-shallow">
             <div class="tray-icons">
-                <img class="tray-icon" src="images/icons/task-scheduler-16x16.png" title="Task Scheduler is not ready." onclick="showMessageBox({iconID: 'info', message: 'Good day to you!'})">
-                <img class="tray-icon" src="images/icons/audio-okay-16x16.png" title="Volume" onclick="showMessageBox({iconID: 'info', message: 'Have a wonderful day!'})">
+                <img class="tray-icon" src="images/icons/task-scheduler-16x16.png" title="Task Scheduler is not ready." onclick="getLines();">
+                <img class="tray-icon" src="images/icons/audio-okay-16x16.png" title="Volume" onclick="getLines();">
             </div>
             <div class="taskbar-time" ondblclick="showMessageBox({iconID: 'info', message: 'Time to get an old clock!'})"></div>
         </div>
     </div>
+    <script>
+        async function getLines() {
+            await fetch("https://mesacomplex.tk/json/lines.json")
+                .then(res => res.json())
+                .then(json => {
+                    showMessageBox({
+                        iconID: 'info',
+                        message: json[Math.floor(Math.random() * json.length)]
+                    })
+                }).catch(error => {
+                    console.log(error);
+                });
+        }
+    </script>
     <!--
 		<div class="start-menu outset-deep" hidden style="display: none; z-index: 5001;">
 			<div class="start-menu-titlebar"></div>
