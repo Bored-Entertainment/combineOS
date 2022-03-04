@@ -1550,6 +1550,14 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Emulatrix",
+    iconID: "emulatrix",
+    open: function() {
+        window.open("/programs/emulatrix", "_blank");
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "2048",
     iconID: "2048",
     open: function() {
