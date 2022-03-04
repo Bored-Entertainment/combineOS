@@ -1610,6 +1610,28 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "3D.CITY",
+    iconID: "3d-city",
+    open: function() {
+        Task(make_iframe_window({
+            src: "/games/html/3d.city/",
+            icons: iconsAtTwoSizes("3d-city"),
+            title: "3D.CITY",
+            outerWidth: 840,
+            outerHeight: 500,
+            resizable: true,
+        }));
+        //TODO: Doesn't work until it's resized
+        /*
+        setTimeout(function() {
+            var window = document.getElementsByClassName("window os-window focused");
+            window[0].style += "width: 833 px !important";
+            console.log(window);
+        }, 2000);*/
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
