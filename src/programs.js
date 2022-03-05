@@ -1749,6 +1749,21 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Duck Hunt",
+    iconID: "duckhunt",
+    open: function() {
+        Task(make_iframe_window({
+            src: "/games/html/duckhunt/",
+            icons: iconsAtTwoSizes("duckhunt"),
+            title: "Duck Hunt",
+            outerWidth: 835,
+            outerHeight: 600,
+            resizable: true,
+        }));
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
