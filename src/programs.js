@@ -1794,6 +1794,23 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Fruit Ninja HD",
+    iconID: "fruit-ninja",
+    open: function() {
+        /*
+        Task(make_iframe_window({
+            src: "/games/html/FruitNinja/",
+            icons: iconsAtTwoSizes("fnf"),
+            title: "Fruit Ninja HD",
+            outerWidth: 650,
+            outerHeight: 500,
+            resizable: true,
+        }));*/
+        window.open("/games/html/FruitNinja/", "_blank");
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
