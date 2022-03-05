@@ -39,7 +39,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our [code of condu
 - **[dependabot](https://github.com/apps/dependabot)** - Checks Security of code
 
 See also the list of other [contributors](https://github.com/Bored-Entertainment/combineOS/contributors) who participated in this project.
-
-## License ![badge](https://badgen.net/github/license/Bored-Entertainment/combineOS)
+ 
+## License [![license](https://badgen.net/github/license/Bored-Entertainment/combineOS/)](LICENSE)
 
 Our [`LICENSE`](LICENSE) file is based off of the [MIT License](https://choosealicense.com/licenses/mit/).
