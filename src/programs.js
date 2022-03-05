@@ -1888,6 +1888,21 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Mario Clone",
+    iconID: "mario",
+    open: function() {
+        Task(make_iframe_window({
+            src: "/games/html/marioclone/",
+            icons: iconsAtTwoSizes("mario"),
+            title: "Mario Clone",
+            outerWidth: 600,
+            outerHeight: 600,
+            resizable: true,
+        }));
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
