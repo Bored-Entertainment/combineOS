@@ -1811,6 +1811,23 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Full Screen Mario",
+    iconID: "mario",
+    open: function() {
+        /*
+        Task(make_iframe_window({
+            src: "/games/html/fullscreenmario/",
+            icons: iconsAtTwoSizes("mario"),
+            title: "Full Screen Mario",
+            outerWidth: 835,
+            outerHeight: 600,
+            resizable: true,
+        }));*/
+        window.open("/games/html/fullscreenmario/", "_blank");
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
