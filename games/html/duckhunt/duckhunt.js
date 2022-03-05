@@ -37593,7 +37593,7 @@ var Game = function () {
       if (!this.paused) {
         this.pause();
       }
-      window.open('/creator.html', '_blank');
+      window.open('creator.html');
     }
   }, {
     key: 'handleClick',
