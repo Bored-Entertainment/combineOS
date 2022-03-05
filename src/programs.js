@@ -1732,6 +1732,23 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Dino",
+    iconID: "dino",
+    open: function() {
+        /*
+        Task(make_iframe_window({
+            src: "/games/html/dino/",
+            icons: iconsAtTwoSizes("dino"),
+            title: "Dino",
+            outerWidth: 835,
+            outerHeight: 500,
+            resizable: true,
+        }));*/
+        window.open("/games/html/dino/", "_blank");
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
