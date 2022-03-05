@@ -1903,6 +1903,21 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Minecraft JS Edition",
+    iconID: "minecraft",
+    open: function() {
+        Task(make_iframe_window({
+            src: "/games/html/minecraftjs/",
+            icons: iconsAtTwoSizes("minecraft"),
+            title: "Minecraft JS Edition",
+            outerWidth: 835,
+            outerHeight: 600,
+            resizable: true,
+        }));
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
