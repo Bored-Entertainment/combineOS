@@ -1843,6 +1843,21 @@ add_icon_not_via_filesystem({
     shortcut: true,
 });
 add_icon_not_via_filesystem({
+    title: "Google Pacman",
+    iconID: "pacman",
+    open: function() {
+        Task(make_iframe_window({
+            src: "https://www.google.com/logos/2010/pacman10-hp.html?hl=en",
+            icons: iconsAtTwoSizes("pacman"),
+            title: "Google Pacman",
+            outerWidth: 500,
+            outerHeight: 300,
+            resizable: true,
+        }));
+    },
+    shortcut: true,
+});
+add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
