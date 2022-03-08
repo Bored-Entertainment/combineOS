@@ -1553,7 +1553,7 @@ add_icon_not_via_filesystem({
     title: "Emulatrix",
     iconID: "emulatrix",
     open: function() {
-        window.open("/programs/emulatrix", "_blank");
+        openTab("/programs/emulatrix");
     },
     shortcut: true,
 });
@@ -1712,7 +1712,7 @@ add_icon_not_via_filesystem({
             outerHeight: 550,
             resizable: true,
         }));*/
-        window.open("/games/html/ctr/", "_blank");
+        openTab("/games/html/ctr/");
     },
     shortcut: true,
 });
@@ -1744,7 +1744,7 @@ add_icon_not_via_filesystem({
             outerHeight: 500,
             resizable: true,
         }));*/
-        window.open("/games/html/dino/", "_blank");
+        openTab("/games/html/dino/");
     },
     shortcut: true,
 });
@@ -1806,7 +1806,7 @@ add_icon_not_via_filesystem({
             outerHeight: 500,
             resizable: true,
         }));*/
-        window.open("/games/html/FruitNinja/", "_blank");
+        openTab("/games/html/FruitNinja/");
     },
     shortcut: true,
 });
@@ -1823,7 +1823,7 @@ add_icon_not_via_filesystem({
             outerHeight: 600,
             resizable: true,
         }));*/
-        window.open("/games/html/fullscreenmario/", "_blank");
+        openTab("/games/html/fullscreenmario/");
     },
     shortcut: true,
 });
@@ -1951,7 +1951,7 @@ add_icon_not_via_filesystem({
     title: "View on GitHub",
     iconID: "github",
     open: function() {
-        window.open("https://github.com/Bored-Entertainment/combineOS/", "_blank");
+        openTab("https://github.com/Bored-Entertainment/combineOS/");
     },
     shortcut: true,
 });
@@ -1964,3 +1964,28 @@ function iconsAtTwoSizes(iconID) {
         32: `images/icons/${iconID}-32x32.png`,
     };
 }
+
+function openTab(url) {
+    var newTab = window.open(url, "_blank");
+    if (!newTab || newTab.closed || typeof newTab.closed == 'undefined') {
+        showMessageBox({
+            iconID: 'error',
+            messageHTML: `Unable to open <a href="${url}" target="_blank">${url}</a><br><br>(Possible Pop-up Blocker Issue)`,
+            buttons: [{
+                    label: "Go to external site",
+                    value: "yes",
+                    default: true,
+                },
+                {
+                    label: "Ignore",
+                    value: "no",
+                },
+            ],
+        }).then((result) => {
+            if (result == "yes") {
+                window.open(url, "_blank");
+            }
+        });
+    }
+}
+openTab.acceptsFilePaths = true;
