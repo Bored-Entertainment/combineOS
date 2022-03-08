@@ -141,27 +141,8 @@
             Loading WebAssembly, please wait...
         </div>
         <div id="select-rom" hidden>
-            <p>Select a game to start with:</p>
-            <select style="padding:.5em; border:2px" onchange="onHomebrewListSelected()" id="homebrew-list">
-                <option value=""></option>
-                <option value="ruby">Pokémon Ruby</option>
-                <option value="sapphire">Pokémon Sapphire</option>
-                <option value="emerald">Pokémon Emerald</option>
-                <option value="firered">Pokémon FireRed</option>
-                <option value="leafgreen">Pokémon LeafGreen</option>
-                <option value="gta">Grand Theft Auto Advance</option>
-                <option value="gameandwatchgallery">Game And Watch Gallery Advance</option>
-                <option value="mariovsdk">Mario Vs. Donkey Kong</option>
-                <option value="metroid-fusion">Metroid Fusion</option>
-                <option value="metroid-zero-mission">Metroi Zero Mission</option>
-                <option value="mother3">Mother 3</option>
-                <option value="pokemonmysteryteam">Pokemon Mystery Team DX</option>
-                <option value="tlozminishcap">The Legend of Zelda The Minish Cap</option>
-
-            </select>
-
-            <p>or choose your own file:<br><input style="padding:.5em; border:2px solid white;" type="file" id="romFile" onchange="onFileSelected()" /></p>
-
+            <div id="homebrew-list"> </div>
+            <p><br><input style="padding:.5em; border:2px solid white;" type="file" id="romFile" onchange="onFileSelected()" /></p>
         </div>
         <hr> Ver. 2021.01.14 | <a target="_blank" href="https://github.com/44670/vba-next-wasm">https://github.com/44670/vba-next-wasm</a>
         <div id="ios-hint" hidden>
